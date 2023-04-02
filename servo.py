@@ -27,7 +27,8 @@ def move_(angle_from, angle_to, motor_num):
 
 #time.sleep(0.05)  # Adjust the delay to control the speed
   time.sleep(1)
-  kit.servo[motor_num].angle = 0
+#  kit.servo[motor_num].angle = 0
 
 
-move_(angle_from=0, angle_to=180, motor_num=1)
+move_(angle_from=0, angle_to=0, motor_num=2)
+
