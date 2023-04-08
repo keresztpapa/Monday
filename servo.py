@@ -1,10 +1,11 @@
 import time
 from adafruit_servokit import ServoKit
 
-def move_(angle_from, angle_to, motor_num):
-  # Initialize the servo hat
-  kit = ServoKit(channels=16)
+# Initialize the servo hat
+global kit
+kit = ServoKit(channels=16)
 
+def move_(angle_from, angle_to, motor_num):
 # Set the initial position of the servo to 0 degrees
 # Change this to the index of your servo
   kit.servo[motor_num].angle = angle_from
@@ -29,17 +30,25 @@ def move_(angle_from, angle_to, motor_num):
       print(angle_from)
       angle_from -= speed
       kit.servo[motor_num].angle = angle_from
-#  time.sleep(0.05)  # Adjust the delay to control the speed
-#time.sleep(1)
-#  kit.servo[motor_num].angle = 0
 
+def stand():
+  kit.servo[0].angle = 90
+  kit.servo[1].angle = 180
+  kit.servo[2].angle = 180
+  kit.servo[4].angle = 0
+  kit.servo[5].angle = 0
+  kit.servo[6].angle = 0
+  kit.servo[8].angle = 0
+  kit.servo[9].angle = 0
+  kit.servo[10].angle = 0
+  kit.servo[12].angle = 90
+  kit.servo[13].angle = 180
+  kit.servo[14].angle = 180
 
-#REVERSED 2-3  -- bal felso
-#horizontal   90 -> 0
+# REVERSED 2-3 bal also
+#horizontal  90 -> 0
 #move_(angle_from=0, angle_to=90, motor_num=0)
-#vertical  180:magas  || 90:közép || 0:has alá megy
 #move_(angle_from=0, angle_to=180, motor_num=1)
-#leg  180 -> 90
 #move_(angle_from=0, angle_to=180, motor_num=2)
 
 #NORMAL
@@ -58,4 +67,6 @@ def move_(angle_from, angle_to, motor_num):
 #vertical
 #move_(angle_from=90, angle_to=180, motor_num=13)
 #leg
-#move_(angle_from=90, angle_to=180, motor_num=14)
+#move_(angle_from=180, angle_to=90, motor_num=14)
+
+stand()
