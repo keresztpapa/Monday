@@ -19,34 +19,31 @@ def servo_move_and_wait(i, j):
 
 def stand():
   servo_move_and_wait(0, 90)
-  servo_move_and_wait(1, 180)
-  servo_move_and_wait(2, 180)
+  servo_move_and_wait(1, 150)
+  servo_move_and_wait(2, 150)
   servo_move_and_wait(4, 0)
-  servo_move_and_wait(5, 0)
-  servo_move_and_wait(6, 0)
+  servo_move_and_wait(5, 30)
+  servo_move_and_wait(6, 30)
   servo_move_and_wait(8, 0)
-  servo_move_and_wait(9, 0)
-  servo_move_and_wait(10, 0)
+  servo_move_and_wait(9, 30)
+  servo_move_and_wait(10, 30)
   servo_move_and_wait(12, 90)
-  servo_move_and_wait(13, 180)
-  servo_move_and_wait(14, 180)
+  servo_move_and_wait(13, 150)
+  servo_move_and_wait(14, 150)
 
 def walk_forward():
-  servo_move_and_wait(2, 90)
-  servo_move_and_wait(1, 90)
+#BAL-FELSO   horizontal :0 ::0->90       vertical: 1 ::180->90       leg: 2 ::180->90
+
+#  servo_move_and_wait(1, 150)
+  pass
+
+#  servo_move_and_wait(1, 50)
 #  servo_move_and_wait(6, 90)
 #  servo_move_and_wait(5, 90)
 #  servo_move_and_wait(10, 90)
 #  servo_move_and_wait(9, 90)
 #  servo_move_and_wait(14, 90)
 #  servo_move_and_wait(13, 90)
-
-# REVERSED 2-3 bal also
-#horizontal  90 -> 0
-#move_(angle_from=0, angle_to=90, motor_num=0)
-#move_(angle_from=0, angle_to=180, motor_num=1)
-#move_(angle_from=0, angle_to=180, motor_num=2)
-
 #NORMAL
 #move_(angle_from=90, angle_to=0, motor_num=4)
 #move_(angle_from=90, angle_to=0, motor_num=5)
@@ -67,5 +64,5 @@ def walk_forward():
 
 
 stand()
-walk_forward()
-stand()
+#walk_forward()
+#stand()
