@@ -117,7 +117,7 @@ def left_lower_step():
 
 
 stand()
-#stand_up()
+stand_up()
 left_upper_step()
 left_lower_step()
 right_upper_step()
