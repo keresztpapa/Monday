@@ -97,12 +97,6 @@ def left_lower_step():
   servo_move_and_wait(13, 100)
   servo_move_and_wait(14, 100)
 
-def move_forward():
-  while True:
-    left_upper_step()
-    left_lower_step()
-    right_upper_step()
-    right_lower_step()
 
 #NORMAL
 #move_(angle_from=90, angle_to=0, motor_num=4)
@@ -122,7 +116,6 @@ def move_forward():
 #leg
 #move_(angle_from=180, angle_to=90, motor_num=14)
 
-
-stand()
-stand_up()
+#stand()
+#stand_up()
 #stand()
